@@ -1,4 +1,4 @@
 const App = () => {
-  return <div></div>;
+  return <div>Shopping Cart Project ready</div>;
 };
 export default App;

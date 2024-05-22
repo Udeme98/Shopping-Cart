@@ -1,4 +1,10 @@
+import Homepage from "./pages/Homepage";
+
 const App = () => {
-  return <div>Shopping Cart Project ready</div>;
+  return (
+    <div>
+      <Homepage />
+    </div>
+  );
 };
 export default App;

@@ -11,7 +11,7 @@ const CartItem = ({ item }) => {
         <h3 className="font-bold text-2xl truncate text-black">
           {item?.price}
         </h3>
-        <button className="text-sm p-3 mt-5 px-8 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-black text-white">
+        <button className="text-sm p-3 mt-5 px-8 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-black text-white hover:bg-gray-500">
           Add to Cart
         </button>
       </div>

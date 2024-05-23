@@ -29,7 +29,7 @@ const CartItems = () => {
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <div className="flex container mx-auto gap-4  p-3 flex-wrap">
+        <div className="flex container mx-auto gap-5 p-3 flex-wrap">
           {products && products.length > 0
             ? products.map((item) => {
                 return <CartItem item={item} key={item.id} />;

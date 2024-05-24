@@ -1,11 +1,16 @@
-import { useDispatch } from "react-redux";
-import { addToCart } from "../cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { addToCart, removeFromCart } from "../cartSlice";
 
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
+  const { cart } = useSelector((store) => store);
 
   const handleAddToCart = () => {
     dispatch(addToCart(item));
+  };
+
+  const handleRemoveFromCart = () => {
+    dispatch(removeFromCart(item));
   };
 
   return (
@@ -19,10 +24,16 @@ const CartItem = ({ item }) => {
           ${item?.price}
         </h3>
         <button
-          onClick={handleAddToCart}
+          onClick={
+            cart.find((product) => product.id === item.id)
+              ? handleRemoveFromCart
+              : handleAddToCart
+          }
           className="text-sm p-3 mt-5 px-8 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-black text-white hover:bg-gray-500"
         >
-          Add to Cart
+          {cart.find((product) => product.id === item.id)
+            ? "Remove from cart"
+            : "Add to Cart"}
         </button>
       </div>
     </section>

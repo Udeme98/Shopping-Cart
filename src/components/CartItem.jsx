@@ -16,7 +16,7 @@ const CartItem = ({ item }) => {
       <div>
         <span className="text-sm text-cyan-700 font-medium">{item?.title}</span>
         <h3 className="font-bold text-2xl truncate text-black">
-          {item?.price}
+          ${item?.price}
         </h3>
         <button
           onClick={handleAddToCart}

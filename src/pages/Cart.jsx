@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import CartTile from "../components/CartTile";
 
 const Cart = () => {
   const [total, setTotal] = useState(0);
@@ -16,7 +17,11 @@ const Cart = () => {
     <>
       {cart && cart.length ? (
         <div className="container mx-auto flex p-3">
-          <div>{cart.map((product) => console.log(product.title))}</div>
+          <div>
+            {cart.map((product) => (
+              <CartTile key={product.id} />
+            ))}
+          </div>
           <div>
             <h1 className="text-3xl font-bold text-blue-500">
               Your Cart Summary

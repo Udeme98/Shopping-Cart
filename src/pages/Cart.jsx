@@ -11,6 +11,10 @@ const Cart = () => {
 
   console.log(cart, total);
 
-  return <div>Cart Item Page</div>;
+  return (
+    <>
+      {cart && cart.length ? <div>Hello</div> : <div>Your Cart is Empty</div>}
+    </>
+  );
 };
 export default Cart;

@@ -16,7 +16,7 @@ const Cart = () => {
     <>
       {cart && cart.length ? (
         <div className="container mx-auto flex p-3">
-          <div></div>
+          <div>{cart.map((product) => console.log(product.title))}</div>
           <div>
             <h1 className="text-3xl font-bold text-blue-500">
               Your Cart Summary

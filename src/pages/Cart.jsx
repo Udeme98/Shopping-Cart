@@ -10,12 +10,29 @@ const Cart = () => {
     setTotal(cart.reduce((acc, cur) => acc + cur.price, 0));
   }, [cart]);
 
-  console.log(cart, total);
+  // console.log(cart, total);
 
   return (
     <>
       {cart && cart.length ? (
-        <div>Hello</div>
+        <div className="container mx-auto flex p-3">
+          <div></div>
+          <div>
+            <h1 className="text-3xl font-bold text-blue-500">
+              Your Cart Summary
+            </h1>
+            <h2 className="text-2xl font-semibold">
+              Total No. of Items:{" "}
+              <span className="font-normal text-gray-600">{cart.length}</span>
+            </h2>
+            <h2 className="text-2xl font-semibold">
+              Total Amount:{" "}
+              <span className="font-normal text-gray-600">
+                ${total.toFixed(2)}
+              </span>
+            </h2>
+          </div>
+        </div>
       ) : (
         <div className="min-h-[80vh] flex justify-center items-center flex-col">
           <p className="text-3xl font-semibold">Your Cart is Empty</p>

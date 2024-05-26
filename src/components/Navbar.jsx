@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { FaCartPlus, FaCartArrowDown } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -6,15 +7,20 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between">
         <Link to={"/"}>
           <h1 className="text-3xl uppercase cursor-pointer font-bold text-red-700 hover:text-red-500">
-            Shopping Cart
+            Shoppier
           </h1>
         </Link>
-        <ul className="flex gap-3 uppercase text-xl font-bold text-red-700 ">
+        <ul className="flex gap-3 uppercase text-2xl font-bold text-red-700 items-center">
           <Link to="/">
-            <li className="cursor-pointer hover:text-red-500">Home</li>
+            <li className="cursor-pointer hover:text-red-500" title="Home">
+              Home
+            </li>
           </Link>
           <Link to="/cart">
-            <li className="cursor-pointer hover:text-red-500">Cart</li>
+            <FaCartPlus
+              className="cursor-pointer hover:text-red-500 text-2xl"
+              title="Cart"
+            />
           </Link>
         </ul>
       </div>

@@ -19,7 +19,7 @@ const Cart = () => {
         <div className="container mx-auto flex p-3">
           <div>
             {cart.map((product) => (
-              <CartTile key={product.id} />
+              <CartTile key={product.id} product={product} />
             ))}
           </div>
           <div>

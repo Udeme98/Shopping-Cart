@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../cartSlice";
+import { Link } from "react-router-dom";
 
 const CartItem = ({ item }) => {
   const dispatch = useDispatch();
@@ -25,9 +26,11 @@ const CartItem = ({ item }) => {
         </h3>
 
         <div className="flex items-center justify-start">
-          <button className="text-sm p-2 mt-5 mr-3 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-black text-white hover:bg-gray-500">
-            More Details
-          </button>
+          <Link to={`/cart-details/${item.id}`}>
+            <button className="text-sm p-2 mt-5 mr-3 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-black text-white hover:bg-gray-500">
+              More Details
+            </button>
+          </Link>
           <button
             onClick={
               cart.find((product) => product.id === item.id)

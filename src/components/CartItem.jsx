@@ -23,18 +23,24 @@ const CartItem = ({ item }) => {
         <h3 className="font-bold text-2xl truncate text-black">
           ${item?.price}
         </h3>
-        <button
-          onClick={
-            cart.find((product) => product.id === item.id)
-              ? handleRemoveFromCart
-              : handleAddToCart
-          }
-          className="text-sm p-3 mt-5 px-8 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-black text-white hover:bg-gray-500"
-        >
-          {cart.find((product) => product.id === item.id)
-            ? "Remove from cart"
-            : "Add to Cart"}
-        </button>
+
+        <div className="flex items-center justify-start">
+          <button className="text-sm p-2 mt-5 mr-3 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-black text-white hover:bg-gray-500">
+            More Details
+          </button>
+          <button
+            onClick={
+              cart.find((product) => product.id === item.id)
+                ? handleRemoveFromCart
+                : handleAddToCart
+            }
+            className="text-sm p-2 mt-5 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-black text-white hover:bg-gray-500"
+          >
+            {cart.find((product) => product.id === item.id)
+              ? "Remove from cart"
+              : "Add to Cart"}
+          </button>
+        </div>
       </div>
     </section>
   );

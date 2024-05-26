@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaCartPlus, FaCartArrowDown } from "react-icons/fa";
+import { FaCartPlus, FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -17,7 +17,7 @@ const Navbar = () => {
             </li>
           </Link>
           <Link to="/cart">
-            <FaCartPlus
+            <FaShoppingCart
               className="cursor-pointer hover:text-red-500 text-2xl"
               title="Cart"
             />

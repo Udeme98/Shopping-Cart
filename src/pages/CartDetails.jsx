@@ -52,13 +52,13 @@ const CartDetails = () => {
         </h2>
         <button
           onClick={
-            cart.find((product) => product.id === item.id)
+            cart.find((product) => product.id === singleProduct.id)
               ? handleRemoveFromCart
               : handleAddToCart
           }
           className="text-sm p-4 mt-5 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-black text-white hover:bg-gray-500"
         >
-          {cart.find((product) => product.id === item.id)
+          {cart.find((product) => product.id === singleProduct.id)
             ? "Remove from cart"
             : "Add to Cart"}
         </button>

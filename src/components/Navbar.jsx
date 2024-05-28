@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FaCartPlus, FaShoppingCart } from "react-icons/fa";
+import { FaHome, FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   return (
@@ -10,15 +10,16 @@ const Navbar = () => {
             Shoppier
           </h1>
         </Link>
-        <ul className="flex gap-3 uppercase text-2xl font-bold text-red-700 items-center">
+        <ul className="flex gap-3 uppercase  font-bold text-red-800 text-4xl items-center">
           <Link to="/">
-            <li className="cursor-pointer hover:text-red-500" title="Home">
-              Home
-            </li>
+            <FaHome
+              className="cursor-pointer hover:text-red-500 "
+              title="Home"
+            />
           </Link>
           <Link to="/cart">
             <FaShoppingCart
-              className="cursor-pointer hover:text-red-500 text-2xl"
+              className="cursor-pointer hover:text-red-500"
               title="Cart"
             />
           </Link>

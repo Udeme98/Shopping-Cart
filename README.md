@@ -9,4 +9,4 @@ This is Shopping cart application, built using Reactjs and TailwindCSS for styli
 3. Cart section to view items added to cart.
 4. Provides detailed information about each item.
 
-![shopping-cart-ui](/src/asset/shopping-cart-readme.png)
+![shopping-cart-ui](/src/assets/shopping-cart-readme.png)

@@ -1,8 +1,10 @@
-# React + Vite
+# Shoppier
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is Shopping cart application, built using Reactjs and TailwindCSS for styling.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Redux-Toolkit: to manage state.
+2. React-router-dom: to enhance seamless navigation.
+3. Cart section to view items added to cart.
+4. Provides detailed information about each item.

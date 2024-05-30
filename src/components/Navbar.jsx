@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { FaHome, FaShoppingCart } from "react-icons/fa";
 
+import { FaHome, FaShoppingCart, FaBars } from "react-icons/fa";
 const Navbar = () => {
   return (
     <nav className="p-7 shadow-md bg-blue-500">
@@ -24,6 +24,7 @@ const Navbar = () => {
             />
           </Link>
         </ul>
+        <FaBars />
       </div>
     </nav>
   );

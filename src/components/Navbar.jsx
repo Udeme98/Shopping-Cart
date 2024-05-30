@@ -10,7 +10,7 @@ const Navbar = () => {
             Shoppier
           </h1>
         </Link>
-        <ul className="flex gap-3 uppercase  font-bold text-red-800 text-4xl items-center">
+        <ul className="hidden md:flex gap-3 uppercase  font-bold text-red-800 text-4xl items-center">
           <Link to="/">
             <FaHome
               className="cursor-pointer hover:text-red-500 "

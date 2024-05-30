@@ -24,7 +24,7 @@ const Navbar = () => {
             />
           </Link>
         </ul>
-        <FaBars />
+        <FaBars className="font-bold text-red-800 text-4xl cursor-pointer hover:text-red-500 md:hidden" />
       </div>
     </nav>
   );

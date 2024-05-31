@@ -27,7 +27,7 @@ const CartItems = () => {
   // }, []);
 
   return (
-    <div>
+    <div className="dark:bg-slate-800">
       {/* {loading ? (
         <div className="min-h-screen flex justify-center items-center">
           <FaSpinner className="text-6xl animate-spin ease-in-out " />
@@ -42,7 +42,7 @@ const CartItems = () => {
         </div>
       )} */}
 
-      <div className="flex container mx-auto gap-5 p-3 flex-wrap">
+      <div className="flex container mx-auto gap-5 p-3 flex-wrap ">
         {products.map((item) => {
           return <CartItem item={item} key={item.id} />;
         })}

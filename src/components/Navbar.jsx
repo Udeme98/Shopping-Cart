@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaHome, FaShoppingCart, FaBars, FaTimes } from "react-icons/fa";
+import { DarkModeContext } from "../App";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
   return (
     <nav className="p-7 shadow-md bg-blue-400 dark:bg-slate-800 ">
@@ -15,50 +18,60 @@ const Navbar = () => {
           </h1>
         </Link>
 
-        <ul className="hidden md:flex gap-3 uppercase  font-bold text-red-600 text-4xl items-center">
-          <Link to="/">
-            <FaHome
-              className="cursor-pointer hover:text-red-500  transition duration-300 dark:text-cyan-400"
-              title="Home"
-            />
-          </Link>
-          <Link to="/cart">
-            <FaShoppingCart
-              className="cursor-pointer hover:text-red-500 transition duration-300 dark:text-cyan-400"
-              title="Cart"
-            />
-          </Link>
-        </ul>
+        <div className="flex gap-2">
+          <ul className="hidden md:flex gap-3 uppercase  font-bold text-red-600 text-4xl items-center">
+            <Link to="/">
+              <FaHome
+                className="cursor-pointer hover:text-red-500  transition duration-300 dark:text-cyan-400"
+                title="Home"
+              />
+            </Link>
+            <Link to="/cart">
+              <FaShoppingCart
+                className="cursor-pointer hover:text-red-500 transition duration-300 dark:text-cyan-400"
+                title="Cart"
+              />
+            </Link>
+          </ul>
 
-        <button
-          onClick={() => setMenuOpen((prev) => !prev)}
-          className="md:hidden"
-        >
-          {menuOpen ? (
-            <FaTimes className="font-bold text-red-600 text-4xl cursor-pointer hover:text-red-500  transition duration-300 dark:text-cyan-400" />
-          ) : (
-            <FaBars className="font-bold text-red-600 text-4xl cursor-pointer hover:text-red-500  transition duration-300 dark:text-cyan-400" />
-          )}
-        </button>
-      </div>
+          {/* Need to add  toggle button here */}
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="border-red-100 border p-1 rounded-sm text-slate-100"
+          >
+            Toggle
+          </button>
 
-      {menuOpen ? (
-        <div className="flex flex-col space-y-3 font-bold mt-4 text-4xl text-red-600 items-center  md:hidden absolute">
-          <Link to={"/"} onClick={() => setMenuOpen(false)}>
-            <FaHome
-              className="cursor-pointer hover:text-red-500  transition duration-300 dark:text-cyan-400"
-              title="Home"
-            />
-          </Link>
-          <Link to={"/cart"} onClick={() => setMenuOpen(false)}>
-            {" "}
-            <FaShoppingCart
-              className="cursor-pointer hover:text-red-500 transition duration-300 dark:text-cyan-400"
-              title="Cart"
-            />
-          </Link>
+          <button
+            onClick={() => setMenuOpen((prev) => !prev)}
+            className="md:hidden"
+          >
+            {menuOpen ? (
+              <FaTimes className="font-bold text-red-600 text-4xl cursor-pointer hover:text-red-500  transition duration-300 dark:text-cyan-400" />
+            ) : (
+              <FaBars className="font-bold text-red-600 text-4xl cursor-pointer hover:text-red-500  transition duration-300 dark:text-cyan-400" />
+            )}
+          </button>
         </div>
-      ) : null}
+
+        {menuOpen ? (
+          <div className="flex flex-col space-y-3 font-bold mt-4 text-4xl text-red-600 items-center  md:hidden absolute">
+            <Link to={"/"} onClick={() => setMenuOpen(false)}>
+              <FaHome
+                className="cursor-pointer hover:text-red-500  transition duration-300 dark:text-cyan-400"
+                title="Home"
+              />
+            </Link>
+            <Link to={"/cart"} onClick={() => setMenuOpen(false)}>
+              {" "}
+              <FaShoppingCart
+                className="cursor-pointer hover:text-red-500 transition duration-300 dark:text-cyan-400"
+                title="Cart"
+              />
+            </Link>
+          </div>
+        ) : null}
+      </div>
     </nav>
   );
 };

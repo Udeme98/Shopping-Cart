@@ -43,7 +43,7 @@ const Navbar = () => {
       </div>
 
       {menuOpen ? (
-        <div className="flex flex-col space-y-3 font-bold mt-4 text-4xl text-red-600 items-center  md:hidden">
+        <div className="flex flex-col space-y-3 font-bold mt-4 text-4xl text-red-600 items-center  md:hidden absolute">
           <Link to={"/"} onClick={() => setMenuOpen(false)}>
             <FaHome
               className="cursor-pointer hover:text-red-500  transition duration-300 dark:text-cyan-400"

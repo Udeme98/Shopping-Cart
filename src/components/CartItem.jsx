@@ -26,7 +26,9 @@ const CartItem = ({ item }) => {
         />
       </div>
       <div>
-        <span className="text-sm text-cyan-700 font-medium">{item?.title}</span>
+        <span className="text-sm text-cyan-400 font-semibold">
+          {item?.title}
+        </span>
         <h3 className="font-bold text-2xl truncate text-black dark:text-slate-300 ">
           ${item?.price}
         </h3>

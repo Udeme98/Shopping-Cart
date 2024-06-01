@@ -37,9 +37,9 @@ const Navbar = () => {
           {/* Need to add  toggle button here */}
           <button onClick={() => setDarkMode(!darkMode)} className="rounded-sm">
             {darkMode ? (
-              <FaSun size={25} className="text-slate-200" />
+              <FaSun size={30} className="text-slate-200" />
             ) : (
-              <FaSun size={25} />
+              <FaSun size={30} />
             )}
           </button>
 

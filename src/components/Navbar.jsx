@@ -1,14 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { useContext, useState } from "react";
-import {
-  FaHome,
-  FaShoppingCart,
-  FaBars,
-  FaTimes,
-  FaSun,
-  FaMoon,
-} from "react-icons/fa";
+import { FaHome, FaShoppingCart, FaBars, FaTimes, FaSun } from "react-icons/fa";
 import { DarkModeContext } from "../App";
 
 const Navbar = () => {
@@ -43,7 +36,11 @@ const Navbar = () => {
 
           {/* Need to add  toggle button here */}
           <button onClick={() => setDarkMode(!darkMode)} className="rounded-sm">
-            {darkMode ? <FaSun /> : <FaMoon />}
+            {darkMode ? (
+              <FaSun size={25} className="text-slate-200" />
+            ) : (
+              <FaSun size={25} />
+            )}
           </button>
 
           <button

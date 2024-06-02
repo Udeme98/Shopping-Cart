@@ -40,7 +40,7 @@ const CartDetails = () => {
             className="w-96 rounded-lg"
           />
         </div>
-        <div className="flex flex-col gap-5 text-2xl flex-1">
+        <div className="flex flex-col gap-5 text-2xl flex-1 font-poppins">
           <h2 className="font-bold text-slate-700 dark:text-slate-300">
             Name:{" "}
             <span className="font-thin text-slate-700 dark:text-slate-300">

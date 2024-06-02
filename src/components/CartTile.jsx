@@ -5,7 +5,7 @@ const CartTile = ({ product }) => {
   const dispatch = useDispatch();
 
   return (
-    <section className="flex mx-auto flex-col w-96 overflow-hidden p-5 bg-white/75 shadow-xl gap-5 border-2 rounded-2xl border-white dark:bg-slate-900 dark:border-slate-900">
+    <section className="flex mx-auto flex-col w-96 overflow-hidden p-5 bg-white/75 shadow-xl gap-5 border-2 rounded-2xl border-white dark:bg-slate-900 dark:border-slate-900 font-poppins">
       <div className=" flex justify-center overflow-hidden products-center rounded-xl">
         <img
           src={product?.image}

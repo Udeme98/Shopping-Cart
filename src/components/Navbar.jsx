@@ -10,7 +10,7 @@ const Navbar = () => {
   const { darkMode, setDarkMode } = useContext(DarkModeContext);
 
   return (
-    <nav className="p-7 shadow-md bg-blue-400 dark:bg-slate-800 ">
+    <nav className="p-7 shadow-md bg-blue-400 dark:bg-slate-800 font-poppins">
       <div className="container mx-auto flex items-center justify-between ">
         <Link to={"/"}>
           <h1 className="text-3xl uppercase cursor-pointer font-bold text-red-600 hover:text-red-500 transition duration-300 dark:text-cyan-400">

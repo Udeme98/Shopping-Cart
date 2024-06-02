@@ -27,7 +27,7 @@ const CartItems = () => {
   }, []);
 
   return (
-    <div className="dark:bg-slate-800 min-h-screen">
+    <div className="dark:bg-slate-800 min-h-screen font-poppins">
       {loading ? (
         <div className="min-h-screen flex justify-center items-center">
           <FaSpinner className="text-6xl animate-spin ease-in-out dark:text-cyan-400" />

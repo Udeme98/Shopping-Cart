@@ -17,7 +17,7 @@ const CartItem = ({ item }) => {
   };
 
   return (
-    <section className="flex mx-auto flex-col w-80 overflow-hidden p-5 bg-white/75 shadow-xl gap-5 border-2 rounded-2xl border-white dark:bg-slate-900 dark:border-slate-900">
+    <section className="flex mx-auto flex-col w-80 overflow-hidden p-5 bg-white/75 shadow-xl gap-5 border-2 rounded-2xl border-white dark:bg-slate-900 dark:border-slate-900 font-poppins">
       <div className=" flex justify-center overflow-hidden items-center rounded-xl text-slate-200">
         <img
           src={item?.image}

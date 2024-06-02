@@ -14,7 +14,7 @@ const Cart = () => {
   // console.log(cart, total);
 
   return (
-    <div className="dark:bg-slate-800 min-h-screen">
+    <div className="dark:bg-slate-800 min-h-screen font-poppins">
       {cart && cart.length ? (
         <div className="container mx-auto flex p-3 justify-between ">
           <div className="flex gap-3 flex-wrap max-w-[900px] ">

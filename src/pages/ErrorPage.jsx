@@ -12,7 +12,7 @@ const ErrorPage = () => {
         </p>
         <Link to={"/"}>
           <button className="text-sm p-3 mt-5 px-8 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-slate-700 text-slate-100 hover:bg-slate-600">
-            Shop Now!
+            Go Home
           </button>
         </Link>
       </div>

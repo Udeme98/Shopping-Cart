@@ -6,7 +6,7 @@ import CartDetails from "./pages/CartDetails";
 import ErrorPage from "./pages/ErrorPage";
 import { createContext, useEffect, useState } from "react";
 
-export const DarkModeContext = createContext(false);
+export const DarkModeContext = createContext();
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(() => {

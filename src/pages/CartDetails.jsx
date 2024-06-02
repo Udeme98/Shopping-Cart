@@ -31,45 +31,47 @@ const CartDetails = () => {
   }, []);
 
   return (
-    <div className="flex container mx-auto gap-5 p-3 min-h-[80vh] items-center max-w-[70%] flex-col lg:flex-row">
-      <div className="flex-1">
-        <img
-          src={productDetails?.image}
-          alt={productDetails?.title}
-          className="w-96"
-        />
-      </div>
-      <div className="flex flex-col gap-5 text-2xl flex-1">
-        <h2 className="font-bold text-gray-700">
-          Name:{" "}
-          <span className="font-semibold text-gray-500">
-            {productDetails?.title}
-          </span>
-        </h2>
-        <h2 className="font-bold text-gray-700">
-          Description:{" "}
-          <span className="font-semibold text-gray-500">
-            {productDetails?.description}
-          </span>
-        </h2>
-        <h2 className="font-bold text-gray-700">
-          Price:{" "}
-          <span className="font-semibold text-gray-500">
-            ${productDetails?.price}
-          </span>
-        </h2>
-        <button
-          onClick={
-            cart.find((product) => product.id === productDetails.id)
-              ? handleRemoveFromCart
-              : handleAddToCart
-          }
-          className="text-sm p-4 mt-5 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-black text-white hover:bg-gray-500"
-        >
-          {cart.find((product) => product.id === productDetails.id)
-            ? "Remove from cart"
-            : "Add to Cart"}
-        </button>
+    <div className="dark:bg-slate-800 min-h-screen">
+      <div className="flex container mx-auto gap-5 p-3 min-h-[80vh] items-center max-w-[70%] flex-col lg:flex-row ">
+        <div className="flex-1 ">
+          <img
+            src={productDetails?.image}
+            alt={productDetails?.title}
+            className="w-96 rounded-lg"
+          />
+        </div>
+        <div className="flex flex-col gap-5 text-2xl flex-1">
+          <h2 className="font-bold text-slate-700 dark:text-slate-300">
+            Name:{" "}
+            <span className="font-thin text-slate-700 dark:text-slate-300">
+              {productDetails?.title}
+            </span>
+          </h2>
+          <h2 className="font-bold text-slate-700 dark:text-slate-300">
+            Description:{" "}
+            <span className="font-thin text-slate-700 dark:text-slate-300">
+              {productDetails?.description}
+            </span>
+          </h2>
+          <h2 className="font-bold text-slate-700 dark:text-slate-300">
+            Price:{" "}
+            <span className="font-thin text-slate-700 dark:text-slate-300">
+              ${productDetails?.price}
+            </span>
+          </h2>
+          <button
+            onClick={
+              cart.find((product) => product.id === productDetails.id)
+                ? handleRemoveFromCart
+                : handleAddToCart
+            }
+            className="text-sm p-4 mt-5 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-slate-700 text-slate-100 hover:bg-slate-600"
+          >
+            {cart.find((product) => product.id === productDetails.id)
+              ? "Remove from cart"
+              : "Add to Cart"}
+          </button>
+        </div>
       </div>
     </div>
   );

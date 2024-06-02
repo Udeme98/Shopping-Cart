@@ -4,9 +4,18 @@ This is Shopping cart application, built using Reactjs and TailwindCSS for styli
 
 ## Features
 
-1. Redux-Toolkit: to manage state.
-2. React-router-dom: to enhance seamless navigation.
-3. Cart section to view items added to cart.
-4. Provides detailed information about each item.
+**Redux-Toolkit:** to manage state.
 
-![shopping-cart-ui](/src/assets/shopping-cart-readme.png)
+**React-router-dom:** to enhance seamless navigation.
+
+**React-icons:** for some icons used in the app such as for the loading state as well as to indicate light and dark mode.
+
+The application provides a _Cart_ section to view summary of items added to cart including the total items and amount.
+
+The app also provides detailed information about each item, via it's _Cart Details_ page.
+
+Light Mode:
+![shopping-cart-ui-light-mode](/src/assets/shopping-ui-readme-light.png)
+
+Dark Mode:
+![shopping-cart-ui-light-mode](/src/assets/shopping-ui-readme-dark.png)

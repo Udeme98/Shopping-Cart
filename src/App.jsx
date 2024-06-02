@@ -4,12 +4,24 @@ import Navbar from "./components/Navbar";
 import Cart from "./pages/Cart";
 import CartDetails from "./pages/CartDetails";
 import ErrorPage from "./pages/ErrorPage";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const DarkModeContext = createContext(false);
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem("dark-mode");
+    return savedMode ? JSON.parse(savedMode) : false;
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("dark-mode", JSON.stringify(darkMode));
+  }, [darkMode]);
 
   return (
     <DarkModeContext.Provider value={{ darkMode, setDarkMode }}>

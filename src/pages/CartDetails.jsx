@@ -28,7 +28,11 @@ const CartDetails = () => {
       }
     };
     fetchProductDetails();
-  }, []);
+  }, [id]);
+
+  if (!productDetails) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="dark:bg-slate-800 min-h-screen">

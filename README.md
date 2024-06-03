@@ -14,6 +14,8 @@ The application provides a _Cart_ section to view summary of items added to cart
 
 The app also provides detailed information about each item, via it's _Cart Details_ page.
 
+Feel free to Fork the repo to make any necessary contribution.
+
 Light Mode:
 ![shopping-cart-ui-light-mode](/src/assets/shopping-ui-readme-light.png)
 

@@ -14,6 +14,8 @@ The application provides a _Cart_ section to view summary of items added to cart
 
 The app also provides detailed information about each item, via it's _Cart Details_ page.
 
+The app uses localStorage to save items added to cart, as well as to save the users preferred theme mode (light mode or dark mode).
+
 Feel free to Fork the repo to make any necessary contribution.
 
 Light Mode:

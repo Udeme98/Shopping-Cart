@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../cartSlice";
+import { FaSpinner } from "react-icons/fa";
 
 const CartDetails = () => {
   const [productDetails, setProductDetails] = useState(null);
@@ -31,7 +32,11 @@ const CartDetails = () => {
   }, [id]);
 
   if (!productDetails) {
-    return <div>Loading...</div>;
+    return (
+      <div className="min-h-[90vh] flex justify-center items-center dark: bg-slate-800">
+        <FaSpinner className="text-6xl animate-spin ease-in-out dark:text-cyan-400" />
+      </div>
+    );
   }
 
   return (

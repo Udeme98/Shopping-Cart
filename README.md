@@ -16,7 +16,7 @@ The app also provides detailed information about each item, via it's _Cart Detai
 
 The app uses localStorage to save items added to cart, as well as to save the users preferred theme mode (light mode or dark mode).
 
-Feel free to Fork the repo to make any necessary contribution
+Feel free to Fork the repo to make any necessary contribution.
 
 Light Mode:
 ![shopping-cart-ui-light-mode](/src/assets/shopping-ui-readme-light.png)
